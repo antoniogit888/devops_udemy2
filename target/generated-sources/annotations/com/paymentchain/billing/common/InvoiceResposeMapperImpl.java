@@ -4,13 +4,13 @@ import com.paymentchain.billing.dto.InvoiceResponse;
 import com.paymentchain.billing.entities.Invoice;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-10-20T12:52:21+0200",
-    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.2 (Oracle Corporation)"
+    date = "2024-02-14T15:30:11-0600",
+    comments = "version: 1.3.1.Final, compiler: Eclipse JDT (IDE) 3.37.0.v20240129-0421, environment: Java 17.0.10 (Eclipse Adoptium)"
 )
 @Component
 public class InvoiceResposeMapperImpl implements InvoiceResposeMapper {
@@ -25,9 +25,9 @@ public class InvoiceResposeMapperImpl implements InvoiceResposeMapper {
 
         invoiceResponse.setInvoiceId( source.getId() );
         invoiceResponse.setCustomer( source.getCustomerId() );
-        invoiceResponse.setNumber( source.getNumber() );
-        invoiceResponse.setDetail( source.getDetail() );
         invoiceResponse.setAmount( source.getAmount() );
+        invoiceResponse.setDetail( source.getDetail() );
+        invoiceResponse.setNumber( source.getNumber() );
 
         return invoiceResponse;
     }
